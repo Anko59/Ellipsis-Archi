@@ -1,0 +1,20 @@
+.defaultBody {
+	overflow: hidden;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+}
+
+.squaredImage {
+	max-width: 350px;
+	max-height: 263px;
+	pointer: cursor;
+	padding: 20px 50px 20px 50px;
+	position: relative;
+}
+#imageContainer {
+	width: 90%;
+	left: 5%;
+	height: 90%;
+	top: 5%;
+}
