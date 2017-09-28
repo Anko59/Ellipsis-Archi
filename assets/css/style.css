@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Franklin);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 .defaultBody {
 	overflow: hidden;
 	background-color: #000;
@@ -8,13 +10,91 @@
 .squaredImage {
 	max-width: 350px;
 	max-height: 263px;
-	pointer: cursor;
-	padding: 20px 50px 20px 50px;
+	cursor: pointer;
 	position: relative;
 }
-#imageContainer {
-	width: 90%;
-	left: 5%;
+.imageContainer {
+	position: relative;
+	top:50%;
+	left: 50%;
+	width: 94%;
 	height: 90%;
-	top: 5%;
+	transform:translate(-50%,-50%);
+	padding: 5% 3% 5% 3%;
+}
+#imageDisplayer {
+	position: absolute;
+	width: 70%;
+	max-height: 90%;
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	background-color: #000;
+	border-style: solid;
+	border-color: #2c3e50;
+	border-radius: 5px;
+	display: none
+}
+#largeImage {
+	position: relative;
+	margin: auto;
+	top:50%;
+	transform:translate(0%,-50%);
+	display: block;
+	opacity: 1;
+	cursor: pointer;
+	max-width:100%;
+	max-height:100%;
+}
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+@-webkit-keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+.headerContainer {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+#title {
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 80px;
+	margin: 0;
+	display: none;
+}
+#subTitle {
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	margin-top: 0;
+	margin-bottom: 20px;
+	display: none;
+}
+.menuImage {
+	max-width: 350px;
+	max-height: 263px;
+	cursor: pointer;
+	position: relative;
 }
