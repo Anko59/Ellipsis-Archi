@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Libre+Franklin);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Libre+Franklin:100);
+
 .defaultBody {
 	overflow: hidden;
 	background-color: #000;
