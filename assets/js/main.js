@@ -16,8 +16,6 @@ $(function() {
 			image = $('.squaredImage').eq(i);
 			previousImage = $('.squaredImage').eq(i-1); 
 			if (previousImage.offset().top + image.height() < $(window).height()){
-				console.log(previousImage.offset().top + image.height());
-				console.log($(window).height());
 				i+=1;
 				setTimeout(fadeInImage,waitTime);
 			}

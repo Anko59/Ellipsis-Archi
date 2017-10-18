@@ -19,8 +19,22 @@
 <meta name="Category" content="internet">
 
 <link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/burgerMenu.css" />
 <link rel="stylesheet" href="assets/css/circledImage.css" />
 <link rel="shortcut icon" href="images/favicon2.ico" type="image/x-icon">
 <link rel="icon" href="images/favicon2.ico" type="image/x-icon">
 
 <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+<nav class="burger">
+  <a href="#" class="burger__button" id="burger-button">
+    <span class="burger__button__icon"></span>
+  </a>
+  <ul class="burger__menu">
+    <li><a href="categories.php?cat=renov">Rénovations</a></li>
+    <li><a href="categories.php?cat=maison">Maisons Neuves</a></li>
+    <li><a href="categories.php?cat=renov">Rénovations</a></li>
+    <li><a href="qui-sommes-nous.php">Qui sommes nous ?</a></li>
+  </ul>
+</nav>
+<script language="javascript" type="text/javascript" src="http://localhost/EllipsisArchi/assets/js/burgerMenu.js"></script>

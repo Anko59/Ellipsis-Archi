@@ -4,14 +4,11 @@
 		La liste de photos à afficher est définie en php
 		la façon dont les photos sont agencées est définie en Javascript (pas moyen d'accéder au format de l'écran en php car coté serveur)
 		*/
-		$directoryName = $path; // Nom du directory ou se trouvent les photos à afficher sur la page
-		$rootFile = $path.'/1'; //Pour une raison obscure, on doit partir d'une des photos pour itérer dans le doc
-		$imageList = array(); 
-		$dir = new DirectoryIterator(dirname($rootFile)); // itération à travers le directory
-		foreach ($dir as $fileinfo) {
-			if (!$fileinfo->isDot()) {
-				array_push($imageList, $fileinfo->getFilename());//Ajoute chaque image
-			}
+		$tab = 'images';
+		include('dbConnection.php');
+		$imageList = array();
+		while ($d = $response->fetch()) {
+			array_push($imageList, str_replace(' ', '%20', $d['path']));
 		}
 		if (isset($menuPath)){
 			$rootFile = $menuPath.'/1';
@@ -33,11 +30,11 @@
 					echo '<a href = "http://localhost/EllipsisArchi/'.$menuUrl.str_replace('txt.jpg','', $menuPos[$i]) .'"><figure><img src = ' . $menuPath . '/' . $menuPos[$i] . ' class = menuImage id = '. str_replace('txt.jpg','', $menuPos[$i]).'></figure></a>';
 				}
 			}
-			echo '<figure><img src = '.$directoryName .'/'. $image . ' class = squaredImage id = ' . $image . '></figure>'; //Génération du html pour chaque image
+			echo '<figure><img src = '. $image . ' class = squaredImage id = ' . $image . '></figure>'; //Génération du html pour chaque image
 			$i += 1;
 		}
 	?>
 </div>
 <div id = "imageDisplayer">
-	<img  src=<?php echo $directoryName .'/'. $image ?> id= 'largeImage'>
+	<img  src=<?php echo $image ?> id= 'largeImage'>
 </div>

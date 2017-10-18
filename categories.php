@@ -14,6 +14,7 @@
 		$path = $data['Path'].'/index';
 		$menuPath = 'assets/img/menu/retour';
 		$menuUrl = 'index.php?ret=';
+		$condition = "categorie='".$cat."' AND is_cat_index=1 ORDER BY RAND()";
 		include ('include/squaredImages.php');
 	?>
 	<script language="javascript" type="text/javascript" src="http://localhost/EllipsisArchi/assets/js/main.js"></script>

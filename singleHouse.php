@@ -1,22 +1,26 @@
+<!DOCTYPE html>
+<html>
 <head>
 	<?php include('include/header.php'); ?>
 	<link rel="stylesheet" href="assets/css/slider.css">
 </head>
-</body class = 'defaultBody'>
+<body class = 'defaultBody'>
 	<div id="slider">
-	    <a href="#" class="control_next">>></a>
+	    <a href="#" class="control_next">></a>
 	    <a href="#" class="control_prev"><</a>
 	    <ul>
-	      <li>SLIDE 1</li>
-	      <li style="background: #aaa;">SLIDE 2</li>
-	      <li>SLIDE 3</li>
-	      <li style="background: #aaa;">SLIDE 4</li>
+	    	<?php
+	    	$directoryName = 'assets/img/nouvelles/Dual/Slider';
+	    	$rootFile = $directoryName.'/1';
+	    	$dir = new DirectoryIterator(dirname($rootFile)); // itération à travers le directory
+			foreach ($dir as $fileinfo) {
+				if (!$fileinfo->isDot()) {
+					echo '<li style="background-image:url('.$directoryName.'/'.$fileinfo->getFilename().');" class="slide"></li>';
+				}
+			}
+	    	?>
 	    </ul>  
   </div>
-
-  <div class="slider_option">
-    <input type="checkbox" id="checkbox">
-    <label for="checkbox">Autoplay Slider</label>
-  </div>
 	<script language="javascript" type="text/javascript" src="assets/js/slider.js"></script>
-<body>
+</body>
+</html>

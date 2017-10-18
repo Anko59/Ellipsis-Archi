@@ -1,24 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);	
 
-html {
-  border-top: 5px solid #fff;
-  background: #58DDAF;
-  color: #2a2a2a;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans';
-}
-
-h1 {
-  color: #fff;
-  text-align: center;
-  font-weight: 300;
-}
-
 #slider {
+  width: 100%;
+  height: 450px;
   position: relative;
   overflow: hidden;
   margin: 20px auto 0 auto;
@@ -29,7 +13,7 @@ h1 {
   position: relative;
   margin: 0;
   padding: 0;
-  height: 200px;
+  height: 100%;
   list-style: none;
 }
 
@@ -39,11 +23,11 @@ h1 {
   float: left;
   margin: 0;
   padding: 0;
-  width: 500px;
-  height: 300px;
-  background: #ccc;
-  text-align: center;
-  line-height: 300px;
+  height: 100%;
+  width: 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center; 
 }
 
 a.control_prev, a.control_next {
@@ -51,7 +35,7 @@ a.control_prev, a.control_next {
   top: 40%;
   z-index: 999;
   display: block;
-  padding: 4% 3%;
+  padding: 2% 1%;
   width: auto;
   height: auto;
   background: #2a2a2a;
